@@ -1,14 +1,25 @@
-#img {
-  display: block;
-  margin: auto;
-  height: 128px;
-  width: 128px;
-  padding: 2rem;
+* {
+  box-sizing: border-box;
 }
-
-#canvas {
-  display: block;
-  margin: 2rem auto;
-  width: 540px;
-  height: 540px;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.row {
+  margin: 0.3rem;
+}
+.spinner {
+  /* margin: 30px; */
+}
+.hidden {
+  opacity: 0;
+}
+.form-control {
+  justify-content: center;
+  display: flex !important;
+  gap: 10px;
+}
+.form-control h3 {
+  text-align: center;
 }
