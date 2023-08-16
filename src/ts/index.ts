@@ -1,10 +1,11 @@
 import type EstimationRequest from "./EstimationRequest";
-import getInputs from "./input_helper";
+import getInputs from "./InputHelper";
 import Config from "./config";
 import spinner from "./spinner";
 
 const resultEl = document.querySelector<HTMLDivElement>(".result");
 const form = document.querySelector<HTMLFormElement>(".main-form");
+spinner.hide();
 
 form?.addEventListener("submit", async (e) => {
   e.preventDefault();
