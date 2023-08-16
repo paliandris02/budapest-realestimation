@@ -27,6 +27,7 @@ form?.addEventListener("submit", async (e) => {
   spinner.hide();
 
   const data: Promise<Object> = await requestResult?.json();
+  console.log(data);
 
   if (resultEl) {
     resultEl.textContent = data.toString();
@@ -49,5 +50,6 @@ async function sendRequest() {
     return res;
   } catch (error) {
     console.log(error);
+    return;
   }
 }

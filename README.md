@@ -1,42 +1,16 @@
-# empty-project
+# Budapest real estate price estimation
 
-Empty project.
+_notes_
 
-## Building and running on localhost
+#### Dev server
 
-First install dependencies:
+`npm run start`
 
-```sh
-npm install
-```
+#### Test
 
-To run in hot module reloading mode:
+`npm run test`
 
-```sh
-npm start
-```
+#### Deploying to GH pages
 
-To create a production build:
-
-```sh
-npm run build-prod
-```
-
-## Running
-
-```sh
-node dist/bundle.js
-```
-
-## Testing
-
-To run unit tests:
-
-```sh
-npm test
-```
-
-## Credits
-
-Made with [createapp.dev](https://createapp.dev/)
-
+`npm run predeploy` - check the URL if own domain expires
+`npm run deploy`
