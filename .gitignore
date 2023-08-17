@@ -1,4 +1,6 @@
-
+dist/
+mochawesome-report/assets/
+mochawesome-report/*.html
 .cache/
 coverage/
 dist/*
