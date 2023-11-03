@@ -1,30 +1,30 @@
 import type EstimationRequest from "./EstimationRequest";
 import getInputs from "./InputHelper";
 import Config from "./config";
-import spinner from "./spinner";
+import { Spinner } from "./Spinner";
 
 const resultEl = document.querySelector<HTMLDivElement>(".result");
 const form = document.querySelector<HTMLFormElement>(".main-form");
-spinner.hide();
+const defReqSpinner = new Spinner("", resultEl);
 
 form?.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  spinner.show();
+  defReqSpinner.show();
 
   const requestResult = await sendRequest();
 
   if (!requestResult?.ok) {
     const errMsg = `Request failed: ${requestResult?.status} ${requestResult?.statusText}`;
     console.error(errMsg);
-    spinner.hide();
+    defReqSpinner.hide();
     if (resultEl) {
       resultEl.textContent = errMsg;
     }
     return;
   }
 
-  spinner.hide();
+  defReqSpinner.hide();
 
   const data: Promise<Object> = await requestResult?.json();
   console.log(data);
