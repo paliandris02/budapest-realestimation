@@ -1,5 +1,7 @@
 # Budapest real estate price estimation
 
+Connected to Jenkins with webhook
+
 _notes_
 
 #### Dev server
